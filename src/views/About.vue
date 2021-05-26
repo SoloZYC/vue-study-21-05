@@ -1,5 +1,7 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div>
+    <h2>about组件</h2>
+    <p>接收外部数据:atguigu</p>
+    <input type="text" />
   </div>
 </template>

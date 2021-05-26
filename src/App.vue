@@ -1,32 +1,41 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+  <div>
+    <div class="row">
+      <div class="col-xs-offset-2 clo-xs-8">
+        <div class="page-header"><h2>Router Basic - 01</h2></div>
+      </div>
     </div>
-    <router-view />
+
+    <div class="row">
+      <div class="col-xs-2 col-xs-offset-2">
+        <div class="list-group">
+          <router-link to="/about" class="list-group-item">About</router-link>
+          <router-link to="/home" class="list-group-item">Home</router-link>
+          <!-- <a href="#/about" class="list-group-item router-link-exact-active activeClass">About</a>
+          <a href="#/home" class="list-group-item ">Home</a> -->
+        </div>
+      </div>
+      <div class="col.xs-6">
+        <div class="panel">
+          <div class="panel-body">
+            <router-view></router-view>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
-<style lang="less">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import { Toast } from "mint-ui";
+export default {
+  methods: {
+    handlerClick() {
+      Toast("提示信息");
+    },
+  },
+};
+</script>
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
+<style>
 </style>
